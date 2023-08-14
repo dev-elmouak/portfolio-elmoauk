@@ -1,0 +1,70 @@
+@media (max-width: 720px) {
+    .header-portfolio{
+        padding: 20px;
+    }
+    .section-home{
+        margin-top: 4rem;
+    }
+    .child-home-element{
+        padding: 0 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+    .nav-bar{
+        width: 100%;
+        height: 100vh;
+        padding: 30px;
+        background: rgb(21, 21, 21);
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: start;
+        position: absolute;
+        transform: scale(-1);
+        left: 0;
+        top: -1000px;
+        transition: .5s;
+    }
+    .nav-bar.show-navBar{
+        top: 4rem;
+        transform: scale(1);
+    }
+    .nav-bar .btn-change-mode{
+        height: fit-content;
+    }
+    .UL-list{
+        width: 100% !important;
+        height: 100vh !important;
+        flex-direction: column;
+    }
+    .UL-list li{
+        width: 100%;
+    }
+
+    .button-menu{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .section-about{
+        height: fit-content !important;
+    }
+    .content-about{
+        flex-direction: column;
+    }
+    .content-about div:nth-child(1){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lists-skills li{
+        padding: 10px;
+    }
+    .lists-skills li::before{
+        background: #242424 !important;
+    }
+}

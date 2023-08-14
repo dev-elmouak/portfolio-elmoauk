@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="tailwind/compiled-tailwind.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-Query.css">
+</head>
+<body>
+    <header class="header-portfolio w-full h-16 flex justify-between items-center fixed top-0">
+        <div class="logo flex content-around items-center">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-bar  flex justify-between items-center">
+            <ul class="UL-list flex content-center items-center">
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about me</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+        <div class="button-menu">
+            <span class="spans btn-span-1"></span>
+            <span class="spans btn-span-2"></span>
+            <span class="spans btn-span-3"></span>
+        </div>
+    </header>
+    <section id="home" class="section-home w-full flex justify-evenly items-center flex-wrap-reverse ">
+        <div class="child-home-element flex justify-center items-start flex-col">
+        <p class="text-3xl">Hello, my name is :</p>
+        <h1 class="leading-none">Abdoarahman ELmoauk</h1>
+            <button class="pl-4 p-3 btn-more">
+                <a href="#instagram">
+                    <span class="fab fa-instagram"></span>
+                </a>
+                <a href="#facebook">
+                    <span class="fab fa-facebook-f"></span>
+                </a>
+                <a href="#twitter">
+                    <span class="fab fa-twitter"></span>
+                </a>
+            </button>
+        </div>
+
+        <div class="child-home-element-picture flex justify-center items-center">
+            <img src="images/my-picture-2.jpg" alt="">
+        </div>
+    </section>
+    <section id="about" class="section-about w-full flex justify-center items-center">
+        <div class="content-about flex justify-between items-center">
+            <div>
+                <img src="images/my-picture-2.jpg" alt="">
+            </div>
+            <div>
+                <h1>About me</h1>
+                Hello, I'm Abdearahman.I'm eager to explore the world of knowledge and build a bright future. I'm passionate about web development.throughout my studies, l've honed my skills in the English language and have also developed expertise in website design.I focused exclusively on self-learning in the field of web design, I have a strong grasp of <span>HTML5</span>,<span>CSS3</span>, and <span>javascript</span> also utilize the sass technology.
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="section-skill w-full flex justify-center items-center">
+        <div class="parent-skills">
+            <ul class="lists-skills flex flex-col">
+                <h1 class="text-5xl" style="color: aliceblue;padding: 20px;">Skills</h1>
+            </ul>
+        </div>
+    </section>
+    <section id="projects" class="section-projects w-full flex justify-center items-center flex-wrap">
+        <div class="parent flex justify-center items-center">
+            <h1 class="class-title absolute">projects <span id="length">0</span></h1>
+            <div class="parent-pro">
+                <div class="projects flex justify-center items-center flex-col">
+                    <h1>discover projects</h1>
+                </div>
+            </div>
+            <div class="itmes-projects">
+                <span class="next">Next <i class="far fa-chevron-right"></i></span>
+            </div>
+        </div>
+    </section>
+    <script src="javascript.js"></script>
+</body>
+</html>

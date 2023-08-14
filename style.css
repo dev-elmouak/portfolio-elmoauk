@@ -1,0 +1,386 @@
+*{
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-primary: #141414;
+    --color-primary: #ffffff;
+    --color-1: #ffae00;
+    --color-1-opacity: #ffae00b5;
+    --color-2: #449a44;
+    --color-3: #ff4f4f;
+    --padding-primary: 5px 10px;
+}
+@keyframes moveAnimation {
+    0%{
+        border-radius: 65% 35% 43% 57% / 67% 55% 45% 33%;
+    }
+    50%{
+        
+    border-radius: 39% 61% 60% 40% / 36% 31% 69% 64%;
+    }
+    100%{
+        border-radius: 65% 35% 43% 57% / 67% 55% 45% 33%;
+    }
+}
+@keyframes showProjects {
+    0%{
+        margin-right: 50%;
+    }
+}
+.header-portfolio{
+    padding: 0 100px;
+    transition: .3s;
+    background: #141414;
+    z-index: 999;
+}
+.header-portfolio .logo{
+    width: fit-content;
+    height: fit-content;
+    gap: 10px;
+}
+.header-portfolio .logo span{
+    --w-h: 15px;
+    width: var(--w-h);
+    height: var(--w-h);
+    border-radius: 50%;
+}
+.header-portfolio .logo span:nth-child(1){
+    background: var(--color-1);
+}
+.header-portfolio .logo span:nth-child(2){
+    background: var(--color-2);
+}
+.header-portfolio .logo span:nth-child(3){
+    background: var(--color-3);
+}
+.header-portfolio .nav-bar .UL-list{
+    width: fit-content;
+    height: fit-content;
+    color: var(--bg-primary);
+    gap: 30px;
+}
+.header-portfolio .nav-bar .UL-list li{
+    position: relative;
+    transition: .2s;
+    color: var(--color-primary);
+}
+
+.header-portfolio .nav-bar .UL-list li::before{
+    content: "";
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: .3s;
+}
+.header-portfolio .nav-bar .UL-list li:hover{
+    color: var(--color-primary);
+}
+
+.header-portfolio .nav-bar .UL-list li:hover::before{
+    width: 100%;
+    background: var(--color-primary);
+}
+
+.btn-change-mode{
+    width: fit-content;
+    height: 100%;
+    margin-left: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.btn-change-mode span{
+    width: 30px;
+    height: 30px;
+    color: var(--bg-primary);
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    transition: .3s;
+    cursor: pointer;
+}
+.btn-change-mode .moon-mode.change-mode-js{
+    color: var(--color-primary);
+}
+.button-menu {
+    width: 40px;
+    height: 30px;
+    gap: 7px;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+.button-menu span{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: .5s;
+    border-radius: 5px;
+}
+.button-menu span.active-All-span{
+    position: absolute;
+}
+.button-menu .btn-span-1.active-span-1{
+    transform: rotate(40deg);
+    rotate: 360deg;
+}
+.button-menu .btn-span-2.active-span-2{
+    transform: rotate(-40deg);
+}
+.button-menu .btn-span-3.active-span-3{
+    transform: rotate(-40deg);
+    rotate: 360deg;
+}
+
+.section-home{
+    height: 600px;
+    background-color:#141414;
+    background-attachment: fixed;
+}
+.child-home-element{
+    width: fit-content;
+    height: fit-content;
+    color: var(--color-primary);
+    gap: 10px;
+}
+.child-home-element h1{
+    font-weight: bold;
+    font-size: 3rem;
+    opacity: 0.7;
+    color: #484848;
+}
+.child-home-element p{
+    font-size: 2rem;
+}
+.child-home-element button{
+    padding: 10px 20px;
+    background: var(--color-primary);
+    color: var(--color-3);
+    font-weight: bold;
+    outline: none;
+    position: relative;
+}
+.child-home-element button::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--color-primary);
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    rotate: 132deg;
+
+}
+.child-home-element button:hover span{
+    scale: 1.5;
+    color: var(--color-3);
+}
+.child-home-element button span{
+    transition: .3s;
+    padding: 0 10px;
+}
+
+.child-home-element-picture{
+    width: 350px;
+    height: 350px;
+    background: var(--color-3);
+    border-radius: 65% 35% 43% 57% / 67% 55% 45% 33%;
+    animation: moveAnimation 3s linear infinite;
+}
+.child-home-element-picture img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 39% 61% 60% 40% / 36% 31% 69% 64%;
+    animation: moveAnimation 4s linear infinite;
+}
+
+
+.section-about{
+    height: 600px;
+}
+.section-about .content-about{
+    max-width: 900px;
+    height: fit-content;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 30px;
+}
+
+.content-about div:nth-child(2){height: 100%;}
+.content-about div:nth-child(2) h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-3);
+}
+.content-about div:nth-child(2){
+    font-size: 1.5rem;
+}
+.content-about div:nth-child(1) img{
+    max-width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.content-about div:nth-child(2) span{
+    color: var(--color-3);
+    font-weight: bold;
+}
+.section-skill{
+    height: 600px;
+    background: var(--bg-primary);
+    padding: var(--padding-primary);
+}
+
+.section-skill .parent-skills{
+    max-width: 720px;
+    height: 100%;
+    flex-grow: 1;
+}
+.lists-skills{
+    max-width: 720px;
+    height: fit-content;
+    gap: 10px;
+}
+.lists-skills li{
+    width: 50%;
+    height: fit-content;
+    background: #1f1f1f;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+.lists-skills li:nth-child(3),
+.lists-skills li:nth-child(5){
+   position: relative;
+}
+.lists-skills li:nth-child(3)::before,
+.lists-skills li:nth-child(5)::before{
+    content: "";
+    width: 10px;
+    height: 100%;
+    background: var(--color-3);
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+    border-radius: 10px;
+}
+.lists-skills li:nth-child(even){
+    margin-left: 50%;
+    position: relative;
+}
+.lists-skills li:nth-child(even)::before{
+    content: "";
+    width: 10px;
+    height: 100%;
+    background:#1f1f1f;
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    border-radius: 10px;
+}
+.lists-skills li p {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+}
+.lists-skills li h4 {
+    padding: 0;
+    color: var(--color-primary);
+}
+.lists-skills h1 {
+    border-bottom: 5px solid var(--color-3);
+}
+.lists-skills li div{
+    width: 90%;
+    height: 10px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.lists-skills li div span{
+    width: 80%;
+    height: 100%;
+    background: var(--color-3);
+    border-radius: 10px;
+    position: relative;
+    padding: 5px;
+}
+.lists-skills li div span .num-skill{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: -20px;
+    top: -35px;
+    background: white;
+    color: var(--color-3);
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+
+.section-projects{
+    height: 600px;
+    padding: 10px;
+}
+
+.section-projects .parent{
+    max-width: 920px;
+    height: 400px;
+    background: var(--bg-primary);
+    color: var(--color-primary);
+    border-radius: 20px;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+}
+.parent-pro{
+    width: 90%;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section-projects .parent .class-title{
+    top: 0px;
+    left: 30px;
+    font-size: 2.5rem;
+    color: var(--color-3);
+}
+.section-projects .parent .itmes-projects{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+.section-projects .parent .itmes-projects span{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px;
+    background: var(--color-primary);
+    color: var(--color-3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.projects{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+}
+.projects p{
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 40px;
+    background: var(--color-primary);
+    color: var(--color-3);
+    border-top-right-radius: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.projects p a{
+    color: #5050ff;
+}
